@@ -21,8 +21,8 @@ namespace CarBook.Application.Features.CQRS.Handlers.CategoryHandlers
         {
             var values = await _repository.GetByIdAsync(command.CategoryId);
 
-            command.CategoryId = values.CategoryId;
-            command.Name=values.Name;
+            
+            values.Name=command.Name;
             await _repository.UpdateAsync(values);
         }
     }

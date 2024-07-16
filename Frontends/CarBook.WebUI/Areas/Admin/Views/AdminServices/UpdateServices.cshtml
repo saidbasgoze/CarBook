@@ -1,0 +1,42 @@
+﻿@model UpdateServiceDto
+@{
+    ViewData["Title"] = "UpdateServices";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Hizmet Güncellemsi</h4>
+                        <p class="card-subtitle mb-4">
+                            Anasayfa ve Hizmetler bölümünde yer alan hizmetler listesini
+                            güncelleyebilirsiniz
+                        </p>
+                        <form method="post">
+                            <input type="hidden" asp-for="ServiceId" />
+                            <div class="form-group">
+                                <label for="exampleInputTitle">Hizmet Başlığı</label>
+                                <input type="text" class="form-control" id="exampleInputTitle" asp-for="Title" placeholder="Hizmet Başlığını Giriniz...">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputDescription">Hizmet Açıklaması</label>
+                                <input type="text" class="form-control" id="exampleInputDescription" asp-for="Description" placeholder="Hizmet Açıklamasını Giriniz...">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputIconURL">Icon URL</label>
+                                <input type="text" class="form-control" id="exampleInputIconURL" asp-for="IconUrl" placeholder="Hizmet Icon URL Giriniz...">
+                            </div>
+                            <button type="submit" class="btn btn-success waves-effect waves-light">Hizmet Bilgisini Güncelle</button>
+                        </form>
+                    </div> <!-- end card-body-->
+                </div> <!-- end card -->
+            </div> <!-- end col -->
+        </div> <!-- end row -->
+    </div> <!-- end container-fluid -->
+</div> <!-- end page-content -->

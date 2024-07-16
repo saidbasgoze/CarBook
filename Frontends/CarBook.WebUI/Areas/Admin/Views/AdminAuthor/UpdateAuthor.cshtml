@@ -1,0 +1,45 @@
+﻿@model UpdateAuthorDto
+@{
+    ViewData["Title"] = "UpdateAuthor";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"> Yazar Güncelleme</h4>
+                        <p class="card-subtitle mb-4">
+                            Yazarla alakalı verileri güncelleyebilirsiniz.
+
+                        </p>
+                        <form method="post">
+                            <input type="hidden" asp-for="AuthorId" />
+                            <div class="form-group">
+                                <label for="exampleInputName">Ad Soyad</label>
+                                <input type="text" class="form-control" id="exampleInputName" asp-for="Name" placeholder="Yazarın Ad ve Soyadını Giriniz...">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputDescription">Açıklama</label>
+                                <input type="text" class="form-control" id="exampleInputName" asp-for="Description" placeholder="Yazar Açıklamasını Giriniz.">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleInputImageUrl">Yazar Image URL</label>
+                                <input type="text" class="form-control" id="exampleInputImageUrl" asp-for="ImageUrl" placeholder="Yazar Image URL  Giriniz...">
+                            </div>
+
+
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Yazarı Güncelle</button>
+                        </form>
+                    </div> <!-- end card-body-->
+                </div> <!-- end card -->
+            </div> <!-- end col -->
+        </div> <!-- end row -->
+    </div> <!-- end container-fluid -->
+</div> <!-- end page-content -->
